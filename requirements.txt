@@ -1,0 +1,13 @@
+# Node.js >= 24
+
+# Runtime dependencies
+@fontsource/be-vietnam-pro@^5.2.8
+@radix-ui/react-dialog@^1.1.15
+exceljs@^4.4.0
+express@^5.1.0
+lucide-react@^0.468.0
+react@^19.2.0
+react-dom@^19.2.0
+
+# Development dependencies
+vite@^7.1.0

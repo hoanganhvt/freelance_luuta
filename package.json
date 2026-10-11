@@ -1,0 +1,34 @@
+{
+  "name": "luuta-production-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.mjs",
+    "build": "vite build",
+    "start": "node server/index.mjs --production",
+    "test": "node --test tests/workflow.test.mjs",
+    "test:worker": "npm run build && node --test tests/worker.test.mjs",
+    "deploy": "cf deploy",
+    "dev:cloudflare": "cf dev",
+    "migrate:d1": "cf d1 migrations apply b29fb563-4d6b-46ec-a119-9c49a2556b7e --dir migrations"
+  },
+  "dependencies": {
+    "@fontsource/be-vietnam-pro": "^5.2.8",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "2.0.0-beta.sha-91c870c02",
+    "cf": "1.0.0-beta.13",
+    "miniflare": "5.20261006.1-alpha",
+    "vite": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
